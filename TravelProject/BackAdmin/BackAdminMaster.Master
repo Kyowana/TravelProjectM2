@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BackAdminMaster.master.cs" Inherits="TravelProject.BackAdmin.BackAdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 145px;
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table align="center">
+            <tr>
+                <td class="auto-style1">
+                    <img src="../pictures/iTABi_logo.png" width="70" />I TABI
+                </td>
+                <td>
+                    <a href="index_backadmin.aspx">首頁</a>
+                    <a href="UserPage_backadmin.aspx" id="UserPage_backadmin" runat="server">個人頁面</a>
+                    <a href="ArticleList_backadmin.aspx">文章列表</a>
+                </td>
+                <td>
+                    <label for="<% = this.txtkeyword.ClientID %>">關鍵字</label>
+                    <asp:TextBox ID="txtkeyword" runat="server" placeHolder="請輸入搜尋文字" Width="149px"></asp:TextBox>
+                    <asp:Button ID="btnSearch" runat="server" Text="搜尋" OnClick="btnSearch_Click" />
+                </td>
+                <td>
+                    <asp:Literal ID="ltlUserAcc" runat="server"></asp:Literal>
+                    <asp:Button ID="btnlogout" runat="server" Text="登出" OnClick="btnlogout_Click" />
+                </td>
+            </tr>
+        </table>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+<script src="../js/Masterkey.js"></script>
+<script>
+    var initObj = {
+        txtSearchID = "<% = this.txtkeyword.ClientID %>";
+        btnSearchID = "<% = this.txtkeyword.ClientID %>";
+    };
+</script>
+</html>
