@@ -174,6 +174,7 @@
                         console.log(txtMsg);
                         if (txtMsg == "OK") {
                             alert("謝謝您，已收到您的檢舉。");
+                            sessionStorage.clear();
                             history.go(0);
                         }
                         else {

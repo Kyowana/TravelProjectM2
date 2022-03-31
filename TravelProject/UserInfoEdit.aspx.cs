@@ -150,5 +150,10 @@ namespace TravelProject
             errorMsg = null;
             return true;
         }
+
+        protected void Logout()
+        {
+            new AccountManager().Logout();
+        }
     }
 }

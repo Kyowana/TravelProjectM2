@@ -33,9 +33,9 @@ namespace TravelProject.API
                 context.Response.ContentType = "text/plain";
                 context.Response.Write("OK");
 
-                // 登出並導回登入頁
-                new AccountManager().Logout();
-                context.Response.Redirect("login.aspx");
+                //// 登出並導回登入頁
+                //new AccountManager().Logout();
+                //context.Response.Redirect("login.aspx");
 
             }
         }
