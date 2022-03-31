@@ -49,8 +49,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                    <asp:Button ID="btnDeact" runat="server" class="btn btn-primary" Text="送出" />
-                    <%--<button type="button" id="btnDeact" class="btn btn-primary">送出</button>--%>
+                    <%--<asp:Button ID="btnDeact" runat="server" class="btn btn-primary" Text="送出" />--%>
+                    <button type="button" id="btnDeact" class="btn btn-primary">送出</button>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
 
     <script>
         $(document).ready(function () {
-            $("#<%= this.btnDeact.ClientID %>").click(function () {
+            $("#btnDeact").click(function () {
                 var container = $("#deactivateModal");
 
                 if ($('#SelectReason option:selected').val() == "0") {
@@ -80,7 +80,6 @@
                         if (txtMsg == "OK") {
                             alert("已受理您的帳號停用申請。");
                             history.go(0);
-                            __doPostBack('Logout');
                         }
                         else {
                             alert("檢舉失敗，請聯絡管理員。");
