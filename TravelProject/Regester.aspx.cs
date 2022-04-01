@@ -47,6 +47,7 @@ namespace TravelProject
                     Email = email
                 };
                 _mgr.CreateAccount(user);
+                HttpContext.Current.Session["RegMsg"] = "註冊成功！請登入以繼續。";
                 Response.Redirect("Login.aspx?State=1");
             }
         }

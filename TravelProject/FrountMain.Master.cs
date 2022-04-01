@@ -11,6 +11,7 @@ namespace TravelProject
 {
     public partial class FrountMain : System.Web.UI.MasterPage
     {
+
         private NotifyManager _nfMgr = new NotifyManager();
         private static UserAccountModel _user;
         protected void Page_Init(object sender, EventArgs e)
@@ -24,6 +25,7 @@ namespace TravelProject
             this.userPage.HRef = "UserPage.aspx?User=" + _user.Account;
             this.collectionPage.HRef = "Collection.aspx";
             InitNotifyBox();
+
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

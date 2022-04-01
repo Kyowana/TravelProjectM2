@@ -78,8 +78,12 @@
                     success: function (txtMsg) {
                         console.log(txtMsg);
                         if (txtMsg == "OK") {
-                            alert("已受理您的帳號停用申請。");
-                            history.go(0);
+                            var modalToggle = document.getElementById('deactivateModal');
+                            var aaa = bootstrap.Modal.getInstance(modalToggle);
+                            aaa.hide();
+                            location.replace('UserInfoEdit.aspx');
+                            //alert("已受理您的帳號停用申請。");
+                            //history.go(0);
                         }
                         else {
                             alert("檢舉失敗，請聯絡管理員。");
@@ -96,8 +100,12 @@
 
         });
 
-
-
     </script>
+<%--    <asp:PlaceHolder ID="PlaceHolder1" runat="server" Visible='<%= !string.IsNullOrWhiteSpace(context.Session["Msg"] as string) %>'>
+        <script>
+            alert('<%= Session["Msg"] as string %>');
+        </script>
+    </asp:PlaceHolder>
 
+    <% Session["UserAccount"] = null; %>--%>
 </asp:Content>

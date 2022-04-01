@@ -35,11 +35,13 @@ namespace TravelProject
                             Response.Redirect("index.aspx");
                         else
                             InitProfile();
+
                     }
                 }
             }
             else
                 Response.Redirect("index.aspx");
+
 
         }
 

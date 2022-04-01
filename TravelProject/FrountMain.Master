@@ -33,7 +33,7 @@
         <nav class="navbar navbar-dark navbar-expand-lg bg-info ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.aspx">logo擺放位置
-            </a>
+                </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -81,7 +81,7 @@
                     <%--下拉式選單，visiable設為false，登入後改為true--%>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" runat="server" visible="true">您好，@帳號
-                    </a>
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="" id="userPage" runat="server"><i class="fa fa-id-card-o" aria-hidden="true"></i>個人頁面</a></li>
 
@@ -161,6 +161,9 @@
 
         })
     </script>
+
+
+
 </body>
 
 </html>

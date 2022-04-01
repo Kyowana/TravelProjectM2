@@ -20,5 +20,17 @@
         <p>若您忘記密碼請跟我們聯絡</p>
         <strong>聯絡信箱:</strong><a href="mailto:ITABI@gmail.com">ITABI@gmail.com
     </form>
+
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+        <script>
+            alert('<%= AlertDeactMsg %>');
+        </script>
+    </asp:PlaceHolder>
+
+    <asp:PlaceHolder ID="PlaceHolder2" runat="server">
+        <script>
+            alert('<%= AlertRegMsg %>');
+        </script>
+    </asp:PlaceHolder>
 </body>
 </html>
