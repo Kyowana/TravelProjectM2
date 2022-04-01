@@ -25,6 +25,9 @@ namespace TravelProject
                 _pageOwner = _AccMgr.GetAccount(ownerAccount);
                 if (_pageOwner != null)
                 {
+                    if (!_pageOwner.AccountStates)
+                        Response.Redirect("index.aspx");
+
                     _nowUser = HttpContext.Current.Session["UserAccount"] as UserAccountModel;
                     this.ltlUserAcc.Text = ownerAccount;
                     this.ltlNickName.Text = _pageOwner.NickName;
